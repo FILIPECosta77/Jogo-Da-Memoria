@@ -56,7 +56,11 @@ h2 {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  gap: 4px;
 
   transform-style: preserve-3d;
   perspective: 500px;
@@ -75,4 +79,6 @@ h2 {
   justify-content: center;
 
   background-color: #f5f2ff;
+
+  font-size: 24px;
 }
