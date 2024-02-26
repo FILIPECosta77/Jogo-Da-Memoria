@@ -4,6 +4,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #2e2257;
+  user-select: none;
 }
 
 h2 {
@@ -56,7 +57,11 @@ h2 {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  gap: 4px;
 
   transform-style: preserve-3d;
   perspective: 500px;
@@ -75,4 +80,30 @@ h2 {
   justify-content: center;
 
   background-color: #f5f2ff;
+
+  font-size: 28px;
+
+  transform-style: preserve-3d; /* Adicionado */
+  transition: 0.3s; /* Alterado */
+}
+
+.item::after {
+  content: "";
+  inset: 0;
+
+  position: absolute;
+
+  background: #dd9b69;
+
+  transition: 0.3s; /* Alterado */
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.item.boxOpen {
+  transform: rotateY(180deg);
+}
+
+.item.boxMatch {
+  display: none;
 }
